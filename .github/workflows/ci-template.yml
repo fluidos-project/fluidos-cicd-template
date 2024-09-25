@@ -1,0 +1,11 @@
+name: Test Self-Hosted Runner
+on: push
+jobs:
+  build:
+    runs-on: [self-hosted, fluidos-cicd-template]
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2
+
+      - name: Testing if self-hosted runner is working
+        run: echo "Self-hosted runner is working!"
