@@ -9,3 +9,12 @@ jobs:
 
       - name: Testing if self-hosted runner is working
         run: echo "Self-hosted runner is working!"
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: fluidos
+          password: ${{ secrets.DOCKER_HUB_WRITE_TOKEN }}
+
+      - name: Verify Docker Hub login
+        run: docker info
