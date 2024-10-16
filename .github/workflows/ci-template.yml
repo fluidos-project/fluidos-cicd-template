@@ -13,7 +13,7 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: fluidos
+          username: ${{ secrets.DOCKER_HUB_USER }}
           password: ${{ secrets.DOCKER_HUB_WRITE_TOKEN }}
 
       - name: Verify Docker Hub login
