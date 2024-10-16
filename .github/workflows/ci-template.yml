@@ -18,8 +18,6 @@ jobs:
         with:
           username: fluidos
           password: ${{ secrets.DOCKER_HUB_WRITE_TOKEN }}
-        env:
-          ACTIONS_STEP_DEBUG: true
 
       - name: Verify Docker Hub login
         run: docker info
