@@ -30,7 +30,7 @@ jobs:
 
       - name: Run tests inside Docker container
         run: |
-          docker run --rm template-image:latest pytest tests/
+          docker run --rm fluidos/template-image:latest pytest tests/
 
       - name: Login and Push to Docker Hub Placeholder
         run: echo "Login and push image to Docker Hub"
