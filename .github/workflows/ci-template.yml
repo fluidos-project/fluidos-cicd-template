@@ -26,7 +26,7 @@ jobs:
           pytest tests/
 
       - name: Build Docker image
-        run: docker build -t template-image:latest .
+        run: docker build -t fluidos/template-image:latest .
 
       - name: Run tests inside Docker container
         run: |
@@ -47,4 +47,4 @@ jobs:
 
       # Push Docker image to Docker Hub
       - name: Push Docker image
-        run: docker push template-image:latest
+        run: docker push fluidos/template-image:latest
